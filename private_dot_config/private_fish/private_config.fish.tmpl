@@ -72,5 +72,11 @@ end
 
 # uv
 if status is-interactive
+{{- if eq .chezmoi.os "linux" }}
+    # Linux paths here
+{{- else if eq .chezmoi.os "darwin" }}
+    # macOS paths here
+{{- else if eq .chezmoi.os "android" }}
     fish_add_path "/data/data/com.termux/files/home/.local/bin"
+{{- end }}
 end
