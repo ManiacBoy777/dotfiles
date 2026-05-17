@@ -1,0 +1,3 @@
+{{ if eq .chezmoi.os "windows" }}
+private_dot_config/private_fish
+{{ end }}
