@@ -1,0 +1,75 @@
+version = 2
+
+[[blocks]]
+type = "prompt"
+alignment = "left"
+
+  [[blocks.segments]]
+  type = "text"
+  style = "plain"
+  foreground = "red"
+  template = "┌─["
+
+  [[blocks.segments]]
+  type = "text"
+  style = "plain"
+  foreground = "blue"
+  template = "{ .CustomUsername }"
+
+  [[blocks.segments]]
+  type = "text"
+  style = "plain"
+  foreground = "yellow"
+  template = "@"
+
+  [[blocks.segments]]
+  type = "text"
+  style = "plain"
+  foreground = "cyan"
+  template = "{{ .chezmoi.hostname }}"
+
+  [[blocks.segments]]
+  type = "text"
+  style = "plain"
+  foreground = "red"
+  template = "]─["
+
+  [[blocks.segments]]
+  type = "path"
+  style = "plain"
+  foreground = "green"
+  template = "{{ "{{ .Path }}" }}"
+
+  [[blocks.segments]]
+  type = "text"
+  style = "plain"
+  foreground = "red"
+  template = "]\n"   # <-- THIS is the key
+
+[[blocks]]
+type = "prompt"
+alignment = "left"
+
+  [[blocks.segments]]
+  type = "text"
+  style = "plain"
+  foreground = "red"
+  template = "└──╼ "
+
+  [[blocks.segments]]
+  type = "text"
+  style = "plain"
+  foreground = "red"
+  template = "❯"
+
+  [[blocks.segments]]
+  type = "text"
+  style = "plain"
+  foreground = "blue"
+  template = "❯"
+
+  [[blocks.segments]]
+  type = "text"
+  style = "plain"
+  foreground = "darkGray"
+  template = "❯ "
