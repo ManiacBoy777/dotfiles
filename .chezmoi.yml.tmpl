@@ -1,3 +1,5 @@
-{{- $CustomUsername := promptString "Enter your desired username: " .chezmoi.username -}}
+{{- $customUsername := promptString "Enter your desired username: " .chezmoi.username -}}
+{{- $customHostname := promptString "Enter your desired hostname: " .chezmoi.hostname -}}
 data:
-    CustomUsername: {{ $CustomUsername | quote }}
+    customUsername: {{ $customUsername | quote }}
+    customHostname: {{ $customHostname | quote }}
