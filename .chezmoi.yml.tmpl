@@ -1,3 +1,3 @@
-{{- $CustomUsername := promptStringOnce . "CustomUsername" "Your desired username: " -}}
+{{- $CustomUsername := promptString "Enter your desired username: " .chezmoi.username -}}
 data:
     CustomUsername: {{ $CustomUsername | quote }}
